@@ -12,6 +12,115 @@ importers:
         specifier: 2.11.11
         version: 2.11.11
 
+  apps/api: {}
+
+  apps/web: {}
+
+  apps/worker: {}
+
+  packages/ai:
+    dependencies:
+      '@siv/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+      '@siv/pipeline':
+        specifier: workspace:*
+        version: link:../pipeline
+      '@siv/shared':
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/audit:
+    dependencies:
+      '@siv/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+      '@siv/shared':
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/auth:
+    dependencies:
+      '@siv/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+      '@siv/shared':
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/contracts: {}
+
+  packages/pipeline:
+    dependencies:
+      '@siv/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+      '@siv/shared':
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/playback:
+    dependencies:
+      '@siv/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+      '@siv/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@siv/storage':
+        specifier: workspace:*
+        version: link:../storage
+      '@siv/videos':
+        specifier: workspace:*
+        version: link:../videos
+
+  packages/shared: {}
+
+  packages/storage:
+    dependencies:
+      '@siv/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+      '@siv/shared':
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/uploads:
+    dependencies:
+      '@siv/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+      '@siv/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@siv/storage':
+        specifier: workspace:*
+        version: link:../storage
+      '@siv/videos':
+        specifier: workspace:*
+        version: link:../videos
+
+  packages/videos:
+    dependencies:
+      '@siv/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+      '@siv/pipeline':
+        specifier: workspace:*
+        version: link:../pipeline
+      '@siv/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@siv/storage':
+        specifier: workspace:*
+        version: link:../storage
+
+  tooling/eslint-config: {}
+
+  tooling/typescript: {}
+
+  tooling/vitest-config: {}
+
 packages:
 
   '@turbo/darwin-64@2.11.11':

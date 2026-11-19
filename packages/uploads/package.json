@@ -1,0 +1,15 @@
+{
+  "name": "@siv/uploads",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "dependencies": {
+    "@siv/contracts": "workspace:*",
+    "@siv/shared": "workspace:*",
+    "@siv/storage": "workspace:*",
+    "@siv/videos": "workspace:*"
+  }
+}

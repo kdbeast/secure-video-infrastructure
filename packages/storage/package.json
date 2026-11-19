@@ -1,0 +1,13 @@
+{
+  "name": "@siv/storage",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "dependencies": {
+    "@siv/contracts": "workspace:*",
+    "@siv/shared": "workspace:*"
+  }
+}
