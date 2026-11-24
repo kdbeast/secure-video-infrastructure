@@ -1,5 +1,5 @@
 {
-  "extends": "@siv/typescript/node-app.json",
+  "extends": "../../tooling/typescript/node-app.json",
   "compilerOptions": {
     "rootDir": "${configDir}"
   },
@@ -8,7 +8,5 @@
     "${configDir}/core",
     "${configDir}/processors"
   ],
-  "exclude": [
-    "${configDir}/dist"
-  ]
+  "exclude": ["${configDir}/dist"]
 }

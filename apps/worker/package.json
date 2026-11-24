@@ -7,11 +7,14 @@
     "build": "tsc -b tsconfig.build.json",
     "dev": "tsx watch main.ts",
     "typecheck": "tsc -p tsconfig.json",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "lint": "eslint ."
   },
   "devDependencies": {
+    "@siv/eslint-config": "workspace:*",
     "@siv/typescript": "workspace:*",
     "@types/node": "catalog:",
+    "eslint": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
   }

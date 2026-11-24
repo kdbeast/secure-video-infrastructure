@@ -13,10 +13,13 @@
     "build": "tsc -b tsconfig.build.json",
     "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput",
     "typecheck": "tsc -p tsconfig.json",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "lint": "eslint ."
   },
   "devDependencies": {
+    "@siv/eslint-config": "workspace:*",
     "@siv/typescript": "workspace:*",
+    "eslint": "catalog:",
     "typescript": "catalog:"
   }
 }

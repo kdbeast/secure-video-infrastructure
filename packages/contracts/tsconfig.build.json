@@ -1,5 +1,5 @@
 {
-  "extends": "@siv/typescript/node-library.json",
+  "extends": "../../tooling/typescript/node-library.json",
   "compilerOptions": {
     "types": []
   },

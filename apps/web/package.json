@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "devDependencies": {
+    "@siv/eslint-config": "workspace:*",
     "@siv/typescript": "workspace:*",
+    "eslint": "catalog:",
     "typescript": "catalog:"
   }
 }
