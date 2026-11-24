@@ -1,0 +1,11 @@
+{
+  "extends": "@siv/typescript/node.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "${configDir}/main.ts",
+    "${configDir}/core",
+    "${configDir}/processors"
+  ]
+}

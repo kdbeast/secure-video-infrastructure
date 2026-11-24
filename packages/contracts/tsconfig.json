@@ -1,0 +1,7 @@
+{
+  "extends": "@siv/typescript/node.json",
+  "compilerOptions": {
+    "types": [],
+    "noEmit": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "@siv/typescript/node-library.json",
+  "references": [
+    {
+      "path": "../contracts/tsconfig.build.json"
+    },
+    {
+      "path": "../shared/tsconfig.build.json"
+    }
+  ]
+}

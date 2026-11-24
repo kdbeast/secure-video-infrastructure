@@ -1,0 +1,12 @@
+{
+  "extends": "./node.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "${configDir}/src",
+    "outDir": "${configDir}/dist",
+    "tsBuildInfoFile": "${configDir}/dist/tsconfig.build.tsbuildinfo",
+    "declarationMap": true
+  }
+}

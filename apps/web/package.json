@@ -2,5 +2,9 @@
   "name": "@siv/web",
   "version": "0.1.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@siv/typescript": "workspace:*",
+    "typescript": "catalog:"
+  }
 }

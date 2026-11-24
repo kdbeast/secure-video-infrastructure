@@ -4,12 +4,26 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@siv/contracts": "workspace:*",
     "@siv/shared": "workspace:*",
     "@siv/storage": "workspace:*",
     "@siv/pipeline": "workspace:*"
+  },
+  "devDependencies": {
+    "@siv/typescript": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
   }
 }

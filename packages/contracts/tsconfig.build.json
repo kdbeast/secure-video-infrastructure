@@ -1,0 +1,7 @@
+{
+  "extends": "@siv/typescript/node-library.json",
+  "compilerOptions": {
+    "types": []
+  },
+  "references": []
+}

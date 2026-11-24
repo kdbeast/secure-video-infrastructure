@@ -1,0 +1,41 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/contracts/tsconfig.build.json"
+    },
+    {
+      "path": "packages/shared/tsconfig.build.json"
+    },
+    {
+      "path": "packages/auth/tsconfig.build.json"
+    },
+    {
+      "path": "packages/audit/tsconfig.build.json"
+    },
+    {
+      "path": "packages/storage/tsconfig.build.json"
+    },
+    {
+      "path": "packages/pipeline/tsconfig.build.json"
+    },
+    {
+      "path": "packages/videos/tsconfig.build.json"
+    },
+    {
+      "path": "packages/ai/tsconfig.build.json"
+    },
+    {
+      "path": "packages/uploads/tsconfig.build.json"
+    },
+    {
+      "path": "packages/playback/tsconfig.build.json"
+    },
+    {
+      "path": "apps/api/tsconfig.build.json"
+    },
+    {
+      "path": "apps/worker/tsconfig.build.json"
+    }
+  ]
+}

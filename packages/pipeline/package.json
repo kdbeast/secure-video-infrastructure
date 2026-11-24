@@ -4,11 +4,28 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./dist/index.js",
-    "./payloads": "./dist/payloads/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./payloads": {
+      "types": "./dist/payloads/index.d.ts",
+      "default": "./dist/payloads/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@siv/contracts": "workspace:*",
     "@siv/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@siv/typescript": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
   }
 }

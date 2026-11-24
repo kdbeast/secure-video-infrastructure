@@ -2,5 +2,11 @@
   "name": "@siv/typescript",
   "version": "0.1.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "exports": {
+    "./node.json": "./node.json",
+    "./node-library.json": "./node-library.json",
+    "./node-app.json": "./node-app.json",
+    "./nextjs.json": "./nextjs.json"
+  }
 }
