@@ -8,5 +8,10 @@
     "${configDir}/core",
     "${configDir}/processors"
   ],
-  "exclude": ["${configDir}/dist"]
+  "exclude": ["${configDir}/dist"],
+  "references": [
+    {
+      "path": "../../packages/shared/tsconfig.build.json"
+    }
+  ]
 }

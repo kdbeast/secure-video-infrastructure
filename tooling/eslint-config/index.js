@@ -1,7 +1,9 @@
 import { builtinModules } from "node:module";
 
 import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
 import { defineConfig } from "eslint/config";
+import reactHooks from "eslint-plugin-react-hooks";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import tseslint from "typescript-eslint";
 
@@ -152,6 +154,21 @@ export function createConfig(options) {
           {
             files: resolved.envFiles,
             rules: { "no-restricted-properties": "off" },
+          },
+        ]
+      : [],
+    resolved.kind === "web"
+      ? [
+          {
+            files: SOURCE_FILES,
+            plugins: { "@next/next": nextPlugin, "react-hooks": reactHooks },
+            rules: {
+              ...nextPlugin.configs.recommended.rules,
+              ...nextPlugin.configs["core-web-vitals"].rules,
+              // App Router only: this rule targets the Pages Router.
+              "@next/next/no-html-link-for-pages": "off",
+              ...reactHooks.configs.recommended.rules,
+            },
           },
         ]
       : [],

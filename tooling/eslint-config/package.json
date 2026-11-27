@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@eslint/js": "catalog:",
+    "@next/eslint-plugin-next": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-simple-import-sort": "catalog:",
     "typescript-eslint": "catalog:"
   },

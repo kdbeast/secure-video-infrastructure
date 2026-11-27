@@ -6,9 +6,14 @@
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
     "dev": "tsx watch main.ts",
+    "start": "node dist/main.js",
     "typecheck": "tsc -p tsconfig.json",
     "clean": "rm -rf dist",
     "lint": "eslint ."
+  },
+  "dependencies": {
+    "@siv/shared": "workspace:*",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@siv/eslint-config": "workspace:*",
