@@ -1,13 +1,11 @@
-import { LOG_LEVELS } from "@siv/shared";
+import { LogLevelSchema, NodeEnvSchema, parseEnv } from "@siv/shared";
 import { z } from "zod";
 
 import { PROCESSOR_NAMES } from "../processor.js";
 
 const WorkerEnvSchema = z.object({
-  NODE_ENV: z
-    .enum(["development", "production", "test"])
-    .default("development"),
-  LOG_LEVEL: z.enum(LOG_LEVELS).default("info"),
+  NODE_ENV: NodeEnvSchema,
+  LOG_LEVEL: LogLevelSchema,
   WORKER_PROCESSORS: z
     .string()
     .default(PROCESSOR_NAMES.join(","))
@@ -25,14 +23,5 @@ export type WorkerEnv = Readonly<z.infer<typeof WorkerEnvSchema>>;
 
 /** Parses the worker environment once. Errors list variable names only, never values. */
 export function loadEnv(source: NodeJS.ProcessEnv = process.env): WorkerEnv {
-  const result = WorkerEnvSchema.safeParse(source);
-  if (!result.success) {
-    const names = [
-      ...new Set(result.error.issues.map((issue) => String(issue.path[0]))),
-    ];
-    throw new Error(
-      `Invalid worker environment variables: ${names.join(", ")}`,
-    );
-  }
-  return Object.freeze(result.data);
+  return parseEnv("worker", WorkerEnvSchema, source);
 }

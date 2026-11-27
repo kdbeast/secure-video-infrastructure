@@ -15,6 +15,12 @@ out/
 !.env.example
 !.env.*.example
 
+# Keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+
 # Logs
 *.log
 logs/

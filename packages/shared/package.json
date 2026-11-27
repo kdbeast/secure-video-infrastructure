@@ -17,7 +17,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "pino": "catalog:"
+    "pino": "catalog:",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@siv/eslint-config": "workspace:*",
